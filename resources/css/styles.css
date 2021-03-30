@@ -1,0 +1,538 @@
+@font-face {
+  font-family: 'Monoton'; 
+  src: url(/fonts/Monoton-Regular.ttf); 
+}
+
+@font-face {
+  font-family: 'Montserrat'; 
+  src: url(/fonts/Montserrat-Regular.ttf); 
+}
+
+@font-face {
+  font-family: 'MontserratSB'; 
+  src: url(/fonts/Montserrat-SemiBold.ttf); 
+}
+
+@font-face {
+  font-family: 'Century Gothic'; 
+  src: url(/fonts/GOTHICBI.TTF); 
+}
+
+html,
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+body,
+header,
+main,
+footer,
+.logo,
+.search,
+.auth,
+.album,
+.track {
+  display: flex;
+}
+
+body,
+main,
+footer {
+  flex-direction: column;
+}
+
+h1 {
+  margin: 40px 0 10px;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 29px;
+}
+
+/* -----------------------------header------------------------------- */
+
+header {
+  justify-content: space-between;
+  padding: 0 170px;
+  border-bottom: 2px solid lightgrey;
+}
+
+header,
+footer {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.logo,
+.search,
+.auth {
+  width: 190px;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.auth {
+  justify-content: flex-end;
+  font-family: 'Montserrat';
+}
+
+.logotype {
+  margin: 5px 9px 0 0;
+  font-family: 'Monoton';
+  font-size: 78px;
+  line-height: 98px;
+}
+
+.logotype a,
+.muscat a,
+.auth a,
+.edit {
+  text-decoration: none;
+  color: white;
+}
+
+.muscat {
+  margin-top: 20px;
+  font-family: 'Century Gothic';
+  font-size: 29px;
+}
+
+.login,
+.logout {
+  margin-left: 20px;
+}
+
+.search {
+  flex-grow: 2;
+  margin: 0 20px;
+}
+
+button,
+input,
+.edit {
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+input {
+  width: 100%;
+  height: 28px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.search input {
+  height: 32px;
+}
+
+.search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.search input::-ms-clear {
+  display: none;
+}
+
+.search button {
+  position: relative;
+  padding: 0;
+  background: none;
+}
+
+.search button:before{
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  content: "\f002";
+  font-family: 'FontAwesome';
+  font-size: 15px;
+  color: #3a3a3a;
+}
+
+/* -----------------------------main------------------------------- */
+
+main {
+  flex-grow: 1;
+  justify-content: center;
+  margin: 0 170px;
+}
+
+.main {
+  flex-direction: row;
+}
+
+.flash {
+  margin-top: 5px;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}
+
+/* -------------------table--------------------- */
+
+table {
+  margin: 30px 0 20px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  padding: 24px 12px;
+  font-family: 'MontserratSB';
+  font-weight: bold;
+  background-color: white;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+td {
+  padding: 12px 20px;
+  border-bottom: 1px solid lightgrey;
+  color: #2a2a2a;
+}
+
+td:nth-child(3) {
+  width: 230px;
+  padding: 15px 17px;
+}
+
+td a {
+  color: inherit;
+  font-weight: bold;
+}
+
+td a:hover {
+  text-decoration: none;
+}
+
+td img {
+  width: 100px;
+}
+
+/* -------------------buttons--------------------- */
+
+button,
+.edit {
+  display: inline-block;
+  padding: 7px 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.edit {
+  margin-top: 10px;
+  font-family: 'Arial';
+  font-size: 13.333px;
+  background-color: rgb(100, 130, 143);
+}
+
+.add {
+  margin-top: 17px;
+  padding: 6px 14px;
+  background-color: white;
+  color: #4a4a4a;
+  border: 1px solid grey;
+}
+
+.save {
+  margin-top: 10px;
+  background-color: rgb(100, 138, 102);
+}
+
+.cancel {
+  display: none;
+  margin-left: 0px;
+  padding: 6px 12px;
+  background-color: white;
+  color: rgb(245, 88, 60);
+  border: 1px solid rgb(245, 88, 60);
+}
+
+.delete {
+  background-color: rgb(226, 106, 85);
+}
+
+.button {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.delete-track {
+  margin-top: 20px;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* -------------------other--------------------- */
+
+.page-not-found {
+  align-items: center;
+}
+
+.page-not-found img{
+  width: 218px;
+  margin-bottom: 60px;
+}
+
+.left img {
+  width: 425px;
+  box-shadow: 3px 3px 3px silver;
+}
+
+p.results,
+p.return {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(75, 75, 75);
+}
+
+p.return a {
+  color: rgb(75, 75, 75);
+}
+
+p.release,
+p.label {
+  margin: 7px 0;
+  font-size: 14px;
+}
+
+p.release {
+  width: 190px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid lightgrey;
+}
+
+span.time {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14px;
+  color: rgb(95, 95, 95);
+}
+
+p.tracklist,
+span {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+li {
+  margin-top: 5px;
+}
+
+.input {
+  margin-top: 3px;
+}
+
+.create input {
+  margin: 3px 10px 0 0;
+  border: 1px solid lightgrey;
+}
+
+.create input[type="file"] {
+  padding-left: 0;
+  border: none;
+}
+
+.create label {
+  margin: 4px 0;
+  font-size: 11px;
+  font-weight: bold;
+  color: #3a3a3a;
+}
+
+.create .id,
+.create .time {
+  width: 60px;
+}
+
+.create .name {
+  width: 265px;
+}
+
+.left {
+  width: 460px;
+  margin: 12px 0 60px;
+  text-align: right;
+}
+
+.album {
+  justify-content: center;
+}
+
+.album .left,
+.album .right {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.right h3 {
+  margin-top: 2px;
+  color: #4a4a4a;
+}
+
+.right {
+  width: 462px;
+  margin-left: 60px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.min {
+  width: 425px;
+  padding: 10px 0 0 40px;
+}
+
+.right .tracks {
+  margin-top: 20px;
+}
+
+.right .info {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+#tracklist label {
+  margin-top: 6px;
+}
+
+.exp {
+  margin: 18px 0 16px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+span.error {
+  font-size: 11px;
+  font-weight: normal;
+  color: red;
+}
+
+/* -------------------tabs--------------------- */
+
+.tabs {
+  width: 100%;
+}
+
+.tabs>input[type="radio"],
+.tabs>div {
+  display: none;
+}
+
+.tabs>div {
+  min-width: 415px;
+  min-height: 345px;
+  padding: 5px 27px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 0 3px 3px;
+}
+
+#tab-1:checked~#info,
+#tab-2:checked~#tracklist {
+  display: block;
+}
+
+.tabs>label {
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  padding: 7px 25px;
+  font-size: 13px;
+  font-weight: bold;
+  color: grey;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px 3px 0 0;
+  cursor: pointer;
+}
+
+.tabs>input[type="radio"]:checked+label {
+  background-color: white;
+  border-bottom: 1px solid white;
+  color: inherit;
+}
+
+/* -------------------breadcrumbs--------------------- */
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 20px 0 19px;
+  list-style: none;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 8px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-right: 8px;
+  color: #6c757d;
+  content: "/";
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+  text-decoration: underline;
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
+
+/* -------------------pagination--------------------- */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination ul li {
+  margin: 0 5px;
+}
+
+.pagination ul li a {
+  text-decoration: none;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  margin-left: -1px;
+  padding: 0 8px 5px;
+  line-height: 1.25;
+  color: #3a3a3a;
+}
+
+/* -----------------------------footer------------------------------- */
+
+footer {
+  padding: 5px;
+  align-items: center;
+  font-size: 14px;
+  border-top: 2px solid lightgrey;
+}
